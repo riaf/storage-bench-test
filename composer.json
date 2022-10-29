@@ -1,0 +1,17 @@
+{
+    "require": {
+        "phpbench/phpbench": "^1.2",
+        "google/cloud-storage": "^1.28",
+        "aws/aws-sdk-php": "^3.240",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "scripts": {
+        "bench": "phpbench run tests/Benchmark --report=default --revs=10 --iterations=3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src/",
+            "Acme\\Benchmark\\": "tests/Benchmark"
+        }
+    }
+}
